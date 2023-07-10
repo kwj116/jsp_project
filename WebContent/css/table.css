@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+
+
+table{
+	height:500px;
+	width:800px;
+	color:black;
+	text-align: center;
+	box-shadow: 0 0 1px #FF9900 inset, 0 0 5px white ;
+	background-color: white;
+	box-shadow : 20px 20px 10px black;
+}
+
+hr{
+	background-color:black;
+	height:2px;
+}
+
+.timeTable{
+	height:400px;
+	width:600px;
+}
+
+th{
+}
+
+td{
+	width:100px;
+	font-weight: bold;
+}
+
+td:hover{
+	cursor:pointer;
+	/*background:linear-gradient(to bottom, #0a2a3b,#076f68,#0a2a3b);*/
+	box-shadow: 1px 1px 1px 1px black;
+}
+
+.prev{
+	color: black;
+}
+
+.prev:hover{
+	border-bottom:1px dashed black;
+}
+
+.prevBtn, .nextBtn{
+	background:none;
+	border:none;
+	cursor: pointer;
+	font-weight: bold;
+}

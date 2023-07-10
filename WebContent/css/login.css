@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+
+table{
+	background-color: white;
+	border-radius: 10px;
+	border: 3px solid white;
+	height:300px;
+	width : 500px;
+	box-shadow : 20px 20px 10px black;
+}
+
+th{
+	color: black;
+}
+input[type=text],input[type=password],input[type=email]{
+	width:100%;
+	font-size: 15px;
+  	color: #222222;
+  	width: 300px;
+  	border: none;
+  	border-bottom: solid #aaaaaa 1px;
+  	padding-bottom: 10px;
+  	text-align: center;
+  	background: none;
+  	opacity: 0.6;
+}
+
+
+input[type=submit]{
+	width:85%;
+	height:70%;
+	font-size:20px;
+	font-weight:bold;
+	color: black;
+	background: none;
+	cursor: pointer;
+}
+
+#move_to_signUp{
+	width:85%;
+	height:70%;
+	font-size:20px;
+	font-weight:bold;
+	color: black;
+	background: none;
+	cursor: pointer;
+	margin:0;
+}
+
+
+
+
+input::placeholder { color: #aaaaaa; }
+input:focus { 
+	outline: none; 
+	opacity: 1;
+}
+
+.sign_up{
+	color: black;
+}
+
+form>h3{
+	text-align:center;
+}
