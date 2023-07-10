@@ -205,7 +205,7 @@ public class UserDAO {
 		}
 		
 		return nonMemHeadCount;
-	}
+	}//총 누적 예약 인원(관리자 모드)
 	
 	
 	public static int getPrice() throws ClassNotFoundException, SQLException {
@@ -220,7 +220,33 @@ public class UserDAO {
 			totalPay = rs.getInt("grandTotalPay");
 		}
 		return totalPay;
+	}//총 누적 수입(관리자 모드)
+	
+	public static UserVO getResList(String nonMemTel) throws ClassNotFoundException, SQLException {
+		String sql = "SELECT * FROM res_nonmember WHERE nonMemTel=?";
+		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
+		pstmt.setString(1,nonMemTel);
+		ResultSet rs = pstmt.executeQuery();
+		UserVO user = new UserVO();
+		if (rs.next()) {
+			String resDate = rs.getString("resDate");
+			String payDate = rs.getString("payDate");
+			String resTime = rs.getString("resTime");
+			int headCount = rs.getInt("headCount"); 
+			int pay = rs.getInt("pay");
+
+			user.setResDate(resDate);
+			user.setPayDate(payDate);
+			user.setResTime(resTime);
+			user.setHeadCount(headCount);
+			user.setPay(pay);
+			
+			
+		}
+		else {
+			return null;
+		}
+		return user;
+		
 	}
-	
-	
 }

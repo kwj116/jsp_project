@@ -12,5 +12,7 @@ public class UserVO {
 	private String email;
 	private String resDate;
 	private String payDate;
+	private String resTime;
 	private int headCount;
+	private int pay;
 }

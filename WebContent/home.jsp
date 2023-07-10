@@ -17,7 +17,7 @@
 		<tr align="center">
 			<td>
 				<button id="openModalBtn">
-  					<span>click!!!</span>
+  					<span>click</span>
 				</button>
 				<%@ include file="modal.jsp" %><br>
 			</td>
