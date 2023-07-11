@@ -8,9 +8,8 @@
 		<a id="login" href="login.jsp">로그인</a>
 		<a id="signUp" href="signUp.jsp">회원가입</a>
 		<a href="reservation.jsp">예약</a>
-		<a href="about.jsp">정크아트란?</a>
+		<a href="about.jsp">전시회</a>
 		<a href="guide.jsp">관람 가이드</a>
-		<a href="facilities.jsp">겸비 시설</a>
 		<a href="onlineExhibition.jsp">온라인 전시관</a>
 		<a href="checkMyRes.jsp">예약 조회</a>
 		<a id="logout" href="Logout">로그 아웃</a>
