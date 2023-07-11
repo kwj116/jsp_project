@@ -10,7 +10,6 @@
 </head>
 <body class="about_body">
 <%@ include file="header.jsp"%>
-<%@ include file="menu.jsp"%>
 <div class="table_box">
 	<table class="table1">
 		<tr>
@@ -27,53 +26,13 @@
 		</tr>
 	</table>
 </div>	
-<div class="about_container">
-	<table class="table2">
-		<tr>
-			<td>
-				<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Afghan-girl.jpg">
-				<h4>Iconic portrait of Afghan girl</h4>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Albert-Einstein.jpg">
-				<h4>Albert Einstein</h4>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Usain-Bolt-the-Jamaican-athlete.jpg">
-				<h4>Usain Bolt, the Jamaican athlete</h4>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Winston-Churchill.jpg">
-			<h4>Winston Churchill</h4>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Angel-after-John-Melluish-Strudwick.jpg">
-			<h4>Angel, after John Melluish Strudwick</h4>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Father-Christmas-made-in-2010.jpeg">
-			<h4>Father Christmas, made in 2010</h4>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<img class="item_img" src="https://vsemart.com/wp-content/uploads/2015/09/Kate-Middleton-Duchess-of-Cambridge.jpg">
-			<h4>Kate Middleton, Duchess of Cambridge</h4>
-			</td>
-		</tr>
-		
-	</table>
-</div>
+<div class="section sec1"></div>
+<div class="section sec2"></div>
+<div class="section sec3"></div>
+<div class="section sec4"></div>
+<div class="section sec5"></div>
+<div class="section sec6"></div>
+<div class="section sec7"></div>
 <%@ include file="footer.jsp"%>
 </body>
 <script>

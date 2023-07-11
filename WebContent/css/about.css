@@ -42,25 +42,68 @@
 	height:800vh;
 	display:flex;
 	background-image:none;
-	background:linear-gradient(to bottom, #0a2a3b,#076f68,#0a2a3b);
+	
+	/*background:linear-gradient(to bottom, #0a2a3b,#076f68,#0a2a3b);*/
 }
 
 .about_body::-webkit-scrollbar {
-  display: none;
+  	display: none;
 }	
 
 .table_box{
+	height:100vh;
+	width:100%;
 	display:flex;
 	justify-content: center;
+	background-image: url("https://cdn.pixabay.com/photo/2021/08/20/18/33/british-museum-6561029_1280.jpg");
+	background-size:cover;
 }
 
 .table1{
-	margin-top:15%;
 	heigth:50%;
 	text-align:center;
 	line-height: 200%;
-	width:80%;
+	width:100%;
 }
+
+.section{
+	height: 100vh;
+}
+
+.sec1{
+	
+}
+
+.sec1{
+	background-image: url("https://cdn.pixabay.com/photo/2023/02/24/07/14/crowd-7810353_1280.jpg");
+	background-size:cover;
+}
+
+.sec2{
+	background-image: url("https://cdn.pixabay.com/photo/2014/07/21/17/52/museum-398761_1280.jpg");
+	background-size:cover;
+}
+.sec3{
+	background-image: url("https://cdn.pixabay.com/photo/2015/05/03/19/05/exhibitions-751576_1280.jpg");
+	background-size:cover;
+}
+.sec4{
+	background-image: url("../img/exhibition-451038_1280.jpg");
+	background-size:cover;
+}
+.sec5{
+	background-image: url("");
+	background-size:cover;
+}
+.sec6{
+	background-image: url("https://cdn.pixabay.com/photo/2014/07/21/17/52/museum-398761_1280.jpg");
+	background-size:cover;
+}
+.sec7{
+	background-image: url("https://cdn.pixabay.com/photo/2014/07/21/17/52/museum-398761_1280.jpg");
+	background-size:cover;
+}
+
 ul{
 	line-height: 180%;
 }
@@ -90,12 +133,14 @@ i{
 
 .about_container{
 	height:100%;
+	width:100%;
 	display:flex;
 	justify-content:center;
 }
 
 .table2{
 	margin-top:30%;
+	width: 100%;
 }
 
 
