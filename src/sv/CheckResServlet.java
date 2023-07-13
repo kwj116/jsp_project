@@ -22,7 +22,6 @@ public class CheckResServlet extends HttpServlet {
         response.setContentType("text/plain; charset=utf-8"); // 응답 형식을 텍스트로 지정
 
         String tel = request.getParameter("tel");
-        System.out.println(tel);
 
         try {
             UserVO rlist = UserDAO.getResList(tel);

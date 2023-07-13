@@ -14,10 +14,18 @@ body{
 
 button{
 	margin-top : 2%;
+	background:lime;
+	border:none;
 }
 
 table{
 	width: 500px;
+	margin: 100px;
+	text-align: center;
+}
+
+caption{
+	font-size : 17px;
 }
 
 a{

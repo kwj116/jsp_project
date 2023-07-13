@@ -34,7 +34,9 @@ public class LoginCheckServlet extends HttpServlet {
                   if (id.equals("admin")) {
 					request.getRequestDispatcher("admin.jsp").forward(request, response);
                   }
-                  request.getRequestDispatcher("home.jsp").forward(request, response);
+                  else {
+                	  request.getRequestDispatcher("home.jsp").forward(request, response);
+                  }
               } else {
             	  login = "refuse";
             	  request.setAttribute("login", login);

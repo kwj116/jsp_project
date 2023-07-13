@@ -11,8 +11,7 @@
 <body>
 <%@ include file="header.jsp" %><!-- header -->
 <%@ include file="menu.jsp" %><!-- 메뉴  -->
-<div class="container" style="animation-name: appear; animation-duration:1s;"><!-- 메인 컨텐츠 삽입 공간 -->
-	
+<div class="container"><!-- 메인 컨텐츠 삽입 공간 -->
 	<table>
 		<tr align="center">
 			<td>

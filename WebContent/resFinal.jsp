@@ -61,45 +61,53 @@
 <%@ include file="footer.jsp" %>
 </body>
 <script>
-	const loginMenu = document.querySelector('#login');
-	const signUpMenu = document.querySelector('#signUp');
-	const logoutMenu = document.querySelector('#logout');
-	const selectOption = document.querySelector('select');
-	const demo = document.querySelector('#demo');
-	const revenue = document.getElementsByName('revenue')[0];
-	const nonMemTel = document.querySelector('#nonMemTel');
-	const form = document.querySelector('form');
-	
-	selectOption.addEventListener('change',function(){
-		const optionValue = selectOption.value;
-		if (optionValue == "") {
-			demo.textContent = "";
-		}
-		else{
-			const totalPrice = optionValue*30000;
-			demo.style.display="block";
-			demo.textContent = "총 금액 : "+ totalPrice + "원";
-			revenue.value = totalPrice;
-		}
-	});//인원 선택하면 가격 나오게 하기
-		
-	form.addEventListener('submit', function(e){
-		e.preventDefault();
-		const selectedOption = document.querySelector('select').value;
-		if (selectedOption == "") {
-			alert("인원을 선택해주세요.");
-			return true;
-		}
-		form.submit();
-	});//인원 선택 안했을 시 알려주기
-		
-	if ("${sessionScope.login}" == "loginComplete") {
-		console.log("${sessionScope.login}");
-		loginMenu.parentNode.removeChild(loginMenu);
-		signUpMenu.parentNode.removeChild(signUpMenu);
-		logoutMenu.style.display = "inline";
-		nonMemTel.style.display= "none";
-	}//로그인 시 로그인,회원가입 창 지우고 로그아웃 창 만들기, 연락처 란 없애기(회원은 연락처 정보가 이미 있기 때문)
-	
+    const loginMenu = document.querySelector('#login');
+    const signUpMenu = document.querySelector('#signUp');
+    const logoutMenu = document.querySelector('#logout');
+    const selectOption = document.querySelector('select');
+    const demo = document.querySelector('#demo');
+    const revenue = document.getElementsByName('revenue')[0];
+    const nonMemTel = document.querySelector('#nonMemTel');
+    const form = document.querySelector('form');
+
+    selectOption.addEventListener('change', function () {
+    	const optionValue = selectOption.value;
+    	if (optionValue == "") {
+     	 	demo.textContent = "";
+    	} 
+    	else {
+      		const totalPrice = optionValue * 30000;
+      		demo.style.display = "block";
+      		demo.textContent = "총 금액 : " + totalPrice + "원";
+      		revenue.value = totalPrice;
+    	}
+  	});
+
+  	form.addEventListener('submit', function (e) {
+    	e.preventDefault();
+    	const selectedOption = document.querySelector('select').value;
+    	if (selectedOption == "") {
+      		alert("인원을 선택해주세요.");
+      		return;
+    	}
+
+    	if ("${sessionScope.login}" !== "loginComplete") {
+      		const nonMemTelValue = document.querySelector('input[name="nonMemTel"]').value;
+      		if (nonMemTelValue === "") {
+        	alert("연락처를 입력해주세요.");
+        	return;
+      		}
+    	}
+
+    	form.submit();
+  	});
+
+  	if ("${sessionScope.login}" == "loginComplete") {
+    	loginMenu.parentNode.removeChild(loginMenu);
+    	signUpMenu.parentNode.removeChild(signUpMenu);
+    	logoutMenu.style.display = "inline";
+    	nonMemTel.style.display = "none";
+  	}
 </script>
+
 </html>

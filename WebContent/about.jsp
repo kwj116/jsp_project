@@ -10,8 +10,8 @@
 </head>
 <body class="about_body">
 <%@ include file="header.jsp"%>
-<button>light mode</button>
 <div class="table_box">
+<button>light mode</button>
 	<table class="table">
 		<tr>
 			<td class="face_box" align="center"><img class="face" src="http://www.eknews.net/xe/files/attach/images/30343/930/515/cd0a4ea15bf0a067f08ff11c5024ba8a.jpg"></td>
@@ -73,5 +73,6 @@
 		logoutMenu.style.display="inline";
 		console.log("${sessionScope.login}");
 	}
+	
 </script>
 </html>

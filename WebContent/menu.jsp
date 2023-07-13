@@ -15,3 +15,9 @@
 		<a id="logout" href="Logout">로그 아웃</a>
 	</nav>
 </div>
+<script>
+	const logout = document.querySelector('#logout');
+	logout.addEventListener('click',function(){
+		alert("로그아웃 되었습니다.");
+	})
+</script>

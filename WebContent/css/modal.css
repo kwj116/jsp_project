@@ -24,6 +24,7 @@
   text-align: center;
 }
 
+
 .close {
   color: #aaa;
   float: right;
@@ -62,7 +63,11 @@
   cursor: pointer;
 }
 
-
+input[type=submit]{
+	width:100px;
+	background-color : white;
+	cursor: pointer;
+}
 
 
 #openModalBtn:before {

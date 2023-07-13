@@ -247,6 +247,6 @@ public class UserDAO {
 			return null;
 		}
 		return user;
-		
 	}
+	
 }
