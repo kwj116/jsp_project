@@ -16,7 +16,7 @@
 	    <div class="box2"><!-- css 파일로 옮기기 -->
 			<form action="CheckResServlet" method="get">
 				<span>
-				연락처 <input type="text" name="tel" placeholder="ex)010-0000-0000">
+				연락처 <input type="text" name="tel" id="telInput" placeholder="ex)010-0000-0000">
 				</span>
 				<input type="submit" value="조회">
 			</form>
@@ -29,25 +29,25 @@
     const loginMenu = document.querySelector('#login');
     const signUpMenu = document.querySelector('#signUp');
     const logoutMenu = document.querySelector('#logout');
-    const inputTel = document.querySelector('input');
+    const inputTel = document.querySelector('#telInput');
     const form = document.querySelector('form');
-    if ("${sessionScope.login}"=="loginComplete") {
+    const telRegex = /^\d{3}-\d{4}-\d{4}$/; 
+    
+    if ("${sessionScope.login}" == "loginComplete") {
         loginMenu.parentNode.removeChild(loginMenu);
         signUpMenu.parentNode.removeChild(signUpMenu);
-        logoutMenu.style.display="inline";
+        logoutMenu.style.display = "inline";
         console.log("${sessionScope.login}");
     }
     
-    form.addEventListener('submit',function(e){
-    	e.preventDefault();
-    	if (inputTel.value.length == 0) {
-    		alert("연락처를 입력해주세요.");
-    		inputTel.focus();
-    		return;
-    	}
-    	form.submit();
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!telRegex.test(inputTel.value)) { //JavaScript의 정규 표현식 객체의 메서드
+            alert("올바른 형식의 연락처를 입력해주세요."); 
+            inputTel.focus();
+            return;
+        }
+        form.submit();
     });
-    
-    
 </script>
 </html>

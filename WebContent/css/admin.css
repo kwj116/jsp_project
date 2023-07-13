@@ -16,6 +16,7 @@ button{
 	margin-top : 2%;
 	background:lime;
 	border:none;
+	cursor: pointer;
 }
 
 table{
@@ -32,7 +33,9 @@ a{
 	margin-top : 3%;
 	color:green;
 	font-weight: bole;
+	text-decoration: none;
 }
+
 
 header{
 	font-size : 20px;
