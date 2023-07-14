@@ -19,7 +19,7 @@
     		</div>
 
     		<div class="img-wrapper faster">
-        		<a href="art/Einstein.jsp"><img src="https://vsemart.com/wp-content/uploads/2015/09/Albert-Einstein.jpg"></a>
+        		<a href="art/einstein.jsp"><img src="https://vsemart.com/wp-content/uploads/2015/09/Albert-Einstein.jpg"></a>
    	 		</div><!--  -->
 
     		<div class="img-wrapper slower vertical">
