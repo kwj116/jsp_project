@@ -7,4 +7,5 @@ public class SurveyVO {
 	private int facebookResult;
 	private int friendResult ;
 	private int otherResult;
+	
 }
