@@ -6,40 +6,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<style>
-	body{
-		background-size: cover;
-		background-repeat: no-repeat;
-		margin: 0;
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #f9f7f6;
-	}
-	
-
-	
-	.grid_box{
-		height:100%;
-		width:100%;
-		display: grid;
-		grid-template-columns: repeat(2,auto);
-    	gap: 10px;
-		place-items: center;
-	}
-		
-	.box1{
-	}	
-	.box2{
-	}	
-	td {
-		font-size:13px;
-	}
-	table{
-		width: 100%;
-	}
-</style>
 <body>
 	<div class="grid_box">
 		<div class="box1">

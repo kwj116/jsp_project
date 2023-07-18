@@ -30,7 +30,8 @@ public class CheckResServlet extends HttpServlet {
             if (rlist == null) {
                 PrintWriter out = response.getWriter();
                 out.print("예약되지 않은 번호입니다."); // AJAX 응답으로 메시지 전송
-            } else {
+            } 
+            else {
                 request.setAttribute("rlist", rlist);
                 request.getRequestDispatcher("myResList.jsp").forward(request, response);
             }
