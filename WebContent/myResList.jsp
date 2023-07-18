@@ -54,4 +54,11 @@
 </div>
 <%@ include file="footer.jsp" %>
 </body>
+<script>
+	if ("${sessionScope.login}"=="loginComplete") {
+		loginMenu.parentNode.removeChild(loginMenu);
+		signUpMenu.parentNode.removeChild(signUpMenu);
+		logoutMenu.style.display="inline";
+	}
+</script>
 </html>

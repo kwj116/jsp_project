@@ -9,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import dao.UserDAO;
 import vo.UserVO;
@@ -22,7 +24,7 @@ public class CheckResServlet extends HttpServlet {
         response.setContentType("text/plain; charset=utf-8"); // 응답 형식을 텍스트로 지정
 
         String tel = request.getParameter("tel");
-
+        HttpSession session = request.getSession();
         try {
             UserVO rlist = UserDAO.getResList(tel);
             if (rlist == null) {

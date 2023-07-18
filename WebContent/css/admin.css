@@ -29,15 +29,16 @@ caption{
 }
 
 
-.row{
-	width: 500px;	
+nav{
+	width: auto;
 }
 
+
 a{
-	margin-top : 3%;
-	color:green;
-	font-weight: bole;
+	float : left;
+	color : peru;
 	text-decoration: none;
+	font-family: serif;
 }
 
 

@@ -19,8 +19,10 @@
 	<br>
 	<header><h2><i>Manager mode</i></h2></header>
 	<button>change display</button>
-	<a class="exitBtn" href="Logout">관리자 모드 종료</a>
-	<a href="chart.jsp">설문조사 통계</a>
+	<nav>
+		<a class="exitBtn" href="Logout">관리자 모드 종료</a>&ensp;&ensp;&ensp; 
+		<a href="chart.jsp">설문조사 통계</a>
+	</nav>
 	<div class="container">
 		<table border="1">
 		<caption>1.예약 현황 및 수입</caption>
