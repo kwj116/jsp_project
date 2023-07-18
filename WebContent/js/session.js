@@ -9,3 +9,4 @@ if ("${sessionScope.login}"=="loginComplete") {
 else if("${sessionScope.login}" == "refuse"){
 	console.log("${sessionScope.login}");
 }
+
