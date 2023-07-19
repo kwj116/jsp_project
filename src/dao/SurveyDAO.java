@@ -12,16 +12,19 @@ public class SurveyDAO {
 		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
 		pstmt.executeUpdate();
 	}
+	
 	public static void resSurveyFacebook(String facebook_count) throws ClassNotFoundException, SQLException {
 		String sql = "UPDATE survey SET facebook_count = facebook_count + 1";
 		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
 		pstmt.executeUpdate();
 	}
+	
 	public static void resSurveyFriend(String friend_count) throws ClassNotFoundException, SQLException {
 		String sql = "UPDATE survey SET friend_count = friend_count + 1";
 		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
 		pstmt.executeUpdate();
 	}
+	
 	public static void resSurveyOther(String other_count) throws ClassNotFoundException, SQLException {
 		String sql = "UPDATE survey SET other_count = other_count + 1";
 		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);

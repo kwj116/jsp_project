@@ -223,6 +223,7 @@ public class UserDAO {
 	}//총 누적 수입(관리자 모드)
 	
 	public static UserVO getResList(String nonMemTel) throws ClassNotFoundException, SQLException {
+		
 		String sql = "SELECT * FROM res_nonmember WHERE nonMemTel=?";
 		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
 		pstmt.setString(1,nonMemTel);

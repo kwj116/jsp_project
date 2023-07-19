@@ -119,7 +119,7 @@
   	let currentDay = currentDate.getDate();
   	let comparisonMonth = currentMonth;
   	function updateCalendar() {
-    	let yearAndMonth = "'"+currentYear+""+"년"+" "+"'"+currentMonth+"'"+"월";
+    	let yearAndMonth = "'"+currentYear+""+"년"+"'"+"'"+currentMonth+"'"+"월";
     	month.innerText = yearAndMonth.replace(/'/g, '');
     	
     	
@@ -135,7 +135,7 @@
         		cell.textContent = '';
       		}
       		
-    	});
+    	});//테이블에 날짜 표시
     	
     	console.log(dateCells.textContent);
     	if (comparisonMonth == currentMonth) {

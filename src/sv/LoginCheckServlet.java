@@ -26,10 +26,10 @@ public class LoginCheckServlet extends HttpServlet {
         try {
         	int result = UserDAO.loginCheck(id, pw); 
         	String userId = UserDAO.userName(id)+"님";
-        	  if (result == 1) {
+        	  if (result == 1) {//로그인 하려는 아이디가 존재 할 시 
                   login = "loginComplete";
                   session.setAttribute("id", id);
-                  session.setAttribute("login", login);
+                  session.setAttribute("login", login);//로그인시 회원가입,로그인 메뉴가 사라지고, 로그아웃 메뉴가 나타나게 하기 위함
                   session.setAttribute("userId", userId);
                   if (id.equals("admin")) {
 					request.getRequestDispatcher("admin.jsp").forward(request, response);
@@ -37,7 +37,7 @@ public class LoginCheckServlet extends HttpServlet {
                   else {
                 	  request.getRequestDispatcher("home.jsp").forward(request, response);
                   }
-              } else {
+              } else {//로그인 하는아이디가 존재 안할 시
             	  login = "refuse";
             	  request.setAttribute("login", login);
             	  request.getRequestDispatcher("login.jsp").forward(request, response);
