@@ -35,6 +35,7 @@
     
     if ("${sessionScope.login}" == "loginComplete") {
         loginMenu.parentNode.removeChild(loginMenu);
+        console.log(loginMenu);
         signUpMenu.parentNode.removeChild(signUpMenu);
         logoutMenu.style.display = "inline";
         console.log("${sessionScope.login}");

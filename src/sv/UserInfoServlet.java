@@ -29,8 +29,16 @@ public class UserInfoServlet extends HttpServlet {
 			String userId = sessionId.substring(0,sessionId.length()-1);
 			UserVO infoList = UserDAO.showInfo(userId);
 			UserVO resList = UserDAO.showResInfo(userId);
+			if (resList.getId() == null) {
+				session.setAttribute("isRes", "null");
+				session.removeAttribute("rlist");
+			}
+			else {
+				session.setAttribute("isRes", "full");
+				session.setAttribute("rlist", resList);
+			}
 			session.setAttribute("ilist", infoList);
-			session.setAttribute("rlist", resList);
+			
 			response.sendRedirect("info.jsp");
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();

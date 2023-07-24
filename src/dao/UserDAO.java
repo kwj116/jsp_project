@@ -250,4 +250,12 @@ public class UserDAO {
 		return user;
 	}
 	
+	
+	public static void deleteRes(String id) throws ClassNotFoundException, SQLException {
+		String sql = "DELETE FROM res_member WHERE userId = ?";
+		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
+		pstmt.setString(1, id);
+		pstmt.executeUpdate();
+	}
+	
 }

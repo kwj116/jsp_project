@@ -43,7 +43,10 @@
 			<td class="info">${rlist.headCount}</td>
 		</tr>
 		<tr>
-			<td colspan="2"><a href="editInfo.jsp"><input class="edit_button" type="button" value="수정하기"></a></td>
+			<td colspan="2"><a href="editInfo.jsp" style="margin:0"><input class="edit_button" type="button" value="수정하기"></a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input class="del_button" type="button" value="예약 취소"></td>
 		</tr>
 	</table>
 </div>
@@ -53,11 +56,19 @@
 	const loginMenu = document.querySelector('#login');
 	const signUpMenu = document.querySelector('#signUp');
 	const logoutMenu = document.querySelector('#logout');
+	const del_button = document.querySelector('.del_button');
 	if ("${sessionScope.login}"=="loginComplete") {
 		loginMenu.parentNode.removeChild(loginMenu);
 		signUpMenu.parentNode.removeChild(signUpMenu);
 		logoutMenu.style.display="inline";
 	}
+	if ("${isRes}" == "null") {
+		del_button.parentNode.removeChild(del_button);
+	}
+	del_button.addEventListener('click',function(){
+		alert("예약이 취소 되었습니다.");
+		location.href="DeleteResServlet";
+	});
 	
 	/*edit_button.addEventListener('click',loadDoc);
 	
