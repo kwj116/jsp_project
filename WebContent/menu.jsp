@@ -11,7 +11,7 @@
 		<a href="about.jsp">전시회</a>
 		<a href="guide.jsp">관람 가이드</a>
 		<a href="onlineExhibition.jsp">온라인 전시관</a>
-		<a href="checkMyRes.jsp">예약 조회</a>
+		<a id="checkRes"href="checkMyRes.jsp">예약 조회</a>
 		<a id="logout" href="Logout">로그 아웃</a>
 	</nav>
 </div>

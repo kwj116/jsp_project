@@ -46,6 +46,7 @@
 	const signUpMenu = document.querySelector('#signUp');
 	const logoutMenu = document.querySelector('#logout');
 	const adminMenu = document.querySelector('#adminMenu');
+	const checkRes = document.querySelector('#checkRes');
 	const userid = document.querySelector('#user_id')
 	const modal = document.getElementById("myModal");
 	const btn = document.getElementById("openModalBtn");
@@ -55,6 +56,7 @@
 		console.log("${sessionScope.login}");
 		loginMenu.parentNode.removeChild(loginMenu);
 		signUpMenu.parentNode.removeChild(signUpMenu);
+		checkRes.parentNode.removeChild(checkRes);
 		logoutMenu.style.display="inline";
 	}
 	else if("${sessionScope.login}" == "refuse"){

@@ -84,6 +84,7 @@
   	const loginMenu = document.querySelector('#login');
   	const signUpMenu = document.querySelector('#signUp');
   	const logoutMenu = document.querySelector('#logout');
+  	const checkRes = document.querySelector('#checkRes');
   	const table = document.querySelector('table');
   	const prevBtn = document.querySelector('.prevBtn');
   	const nextBtn = document.querySelector('.nextBtn');
@@ -97,6 +98,7 @@
   	if ("${sessionScope.login}"=="loginComplete") {
 		loginMenu.parentNode.removeChild(loginMenu);
 		signUpMenu.parentNode.removeChild(signUpMenu);
+		checkRes.parentNode.removeChild(checkRes);
 		logoutMenu.style.display="inline";
 	}
   	dateCells.forEach((cell) => {
