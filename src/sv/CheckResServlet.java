@@ -20,11 +20,9 @@ public class CheckResServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
-        response.setContentType("text/plain; charset=utf-8"); // 응답 형식을 텍스트로 지정
+        response.setContentType("text/html; charset=utf-8"); // 응답 형식을 텍스트로 지정
 
         String tel = request.getParameter("tel");
-        HttpSession session = request.getSession();
         try {
             UserVO rlist = UserDAO.getResList(tel);
             if (rlist == null) {
@@ -32,6 +30,7 @@ public class CheckResServlet extends HttpServlet {
                 out.print("예약되지 않은 번호입니다."); // AJAX 응답으로 메시지 전송
             } 
             else {
+            	request.setAttribute("tel", tel);
                 request.setAttribute("rlist", rlist);
                 request.getRequestDispatcher("myResList.jsp").forward(request, response);
             }

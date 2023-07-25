@@ -13,13 +13,11 @@
 <div class="container">
     <div class="box"><!-- css 파일로 옮기기 -->
         <h4>회원인 경우 로그인 → 본인 아이디 메뉴에 들어가면 예약정보를 확인 할 수 있습니다.</h4>
-	    <div class="box2"><!-- css 파일로 옮기기 -->
-			<form action="CheckResServlet" method="get">
-				<span>
-				연락처 <input type="text" name="tel" id="telInput" placeholder="ex)010-0000-0000">
-				</span>
-				<input type="submit" value="조회">
-			</form>
+	    <div class="box2" id="demo"><!-- css 파일로 옮기기 -->
+			<span>
+			연락처 <input type="text" name="tel" id="telInput" placeholder="ex)010-0000-0000">
+			</span>
+			<input type="submit" onclick="loadDoc()" value="조회">
 	    </div>
     </div>
 </div>
@@ -30,7 +28,6 @@
     const signUpMenu = document.querySelector('#signUp');
     const logoutMenu = document.querySelector('#logout');
     const inputTel = document.querySelector('#telInput');
-    const form = document.querySelector('form');
     const telRegex = /^\d{3}-\d{4}-\d{4}$/; 
     
     if ("${sessionScope.login}" == "loginComplete") {
@@ -40,7 +37,14 @@
         logoutMenu.style.display = "inline";
         console.log("${sessionScope.login}");
     }
-    
+    function loadDoc() {
+    	  const xhttp = new XMLHttpRequest();
+    	  xhttp.onload = function() {
+    	    document.getElementById("demo").innerHTML = this.responseText;
+    	    }
+    	  xhttp.open("GET", "CheckResServlet?tel="+inputTel.value, true);
+    	  xhttp.send();
+    	}
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         if (!telRegex.test(inputTel.value)) { //JavaScript의 정규 표현식 객체의 메서드

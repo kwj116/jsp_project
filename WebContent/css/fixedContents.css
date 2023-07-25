@@ -16,12 +16,12 @@ body {
 	background:none;
 	text-align:center;
 	color: white;
-	height:10vh;
+	height:100px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	background-color: black;
-	font-size:1.7em;
+	font-size:30px;
 }
 
 
@@ -67,7 +67,6 @@ img{
 	height:550px;
 	border: 2px solid #CDCDCD;
  	padding : 3px;
- 	box-shadow : 30px 30px 10px black;
 }
 
 
