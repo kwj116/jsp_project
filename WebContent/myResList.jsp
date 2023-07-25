@@ -2,29 +2,29 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <div class="res_box">
-	<table border=1>
+	<table class="res_list">
 		<tr>
-			<td>연락처</td>
+			<th>연락처</th>
 			<td>${tel }</td>
 		</tr>
 		<tr>
-			<td>전시회 예약 날짜</td>
+			<th>전시회 예약 날짜</th>
 			<td>${rlist.resDate }</td>	
 		</tr>
 		<tr>
-			<td>관람 시간</td>
+			<th>관람 시간</th>
 			<td>${rlist.resTime }</td>	
 		</tr>
 		<tr>
-			<td>결제일</td>
+			<th>결제일</th>
 			<td>${rlist.payDate }</td>	
 		</tr>
 		<tr>
-			<td>결제가격</td>
+			<th>결제가격</th>
 			<td>${rlist.pay }</td>	
 		</tr>
 		<tr>
-			<td>예약 인원</td>
+			<th>예약 인원</th>
 			<td>${rlist.headCount }명</td>	
 		</tr>
 	</table>

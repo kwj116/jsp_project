@@ -22,12 +22,11 @@ hr{
 	width:600px;
 }
 
-th{
-}
 
 td{
 	width:100px;
 	font-weight: bold;
+	text-align: center;
 }
 
 td:hover{

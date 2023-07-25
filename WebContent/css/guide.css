@@ -39,18 +39,16 @@
 	}
 	
 .header_box{
-	width:1300px;
+	width:100%;
 	background:none;
 	text-align:center;
-	color: white;
-	height:80px;
+	height:100px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	position:fixed;
 	/*background: linear-gradient(to right, #FF9900, #00FFFF );*/
 	font-size:30px;
-	margin:0;
 }
 
 .icon{

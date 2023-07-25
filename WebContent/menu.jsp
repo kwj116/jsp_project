@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <div class="nav_box">
 	<nav>
-		<a id="adminMenu" href="admin.jsp" title="관리자 모드로 정보를 확인할 수 있습니다.">관리자 모드</a>
 		<a id="user_id" href="UserInfo" title="개인정보를 확인 할 수 있습니다.">${userId}</a>
 		<a id="login" href="login.jsp">로그인</a>
 		<a id="signUp" href="signUp.jsp">회원가입</a>
