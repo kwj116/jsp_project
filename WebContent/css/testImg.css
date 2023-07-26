@@ -18,7 +18,6 @@ body {
   flex-direction: column;
   animation-name: appear;
   animation-duration:1.3s;
- 
 }
 
 .header_box{
@@ -28,6 +27,7 @@ body {
 	align-items:center;
 	justify-content:center;
 	font-size:1.7em;
+	font-family: 'Orbit', sans-serif;
 }
 a{
 	text-decoration: none;

@@ -19,7 +19,7 @@
 		<tr align="center">
 			<td>
 				<button id="openModalBtn">
-  					<span>click</span>
+  					<span><i>click</i></span>
 				</button>
 				<%@ include file="modal.jsp" %><br>
 			</td>
@@ -54,7 +54,6 @@
 	const modal = document.getElementById("myModal");
 	const btn = document.getElementById("openModalBtn");
 	const closeBtn = document.querySelector(".close");
-	
 	if ("${sessionScope.login}"=="loginComplete") {
 		console.log("${sessionScope.login}");
 		loginMenu.parentNode.removeChild(loginMenu);

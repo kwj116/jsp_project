@@ -10,8 +10,16 @@
 <link href="css/reservation.css" rel="stylesheet" type="text/css">
 <link href="css/fixedContents.css" rel="stylesheet" type="text/css">
 <title>갤러리 예약</title>
-
 </head>
+<style>
+	.disabled{
+		pointer-events: none;
+	}
+	.disabled-date {
+		background-color:#dcdcdc;
+    	pointer-events: none;
+	}
+</style>
 <body>
 <%@ include file="header.jsp" %>
 <%@ include file="menu.jsp" %>
@@ -23,16 +31,16 @@
       <th><button class="nextBtn">다음</button></th>
     </tr>
     <tr>
-    	<th colspan="7"><hr></th>
+    	<th colspan="7"><hr style="background-color: gray; height: 1px; "></th>
     </tr>
     <tr>
-      <th class="holiday">일</th>
-      <th>월</th>
-      <th>화</th>
-      <th>수</th>
-      <th>목</th>
-      <th>금</th>
-      <th class="holiday">토</th>
+      <th class="holiday">Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th class="holiday">Sat</th>
     </tr>
     <tr>
       <td class="date"></td>
@@ -97,7 +105,14 @@
   	const body = document.querySelector('body');
     const modal = document.querySelector('.modal');
     const closePopup = document.querySelector('.modal_close_btn');
-    
+
+  	let currentDate = new Date(); 
+
+  	let currentYear = currentDate.getFullYear(); 
+  	let currentMonth = currentDate.getMonth() + 1;
+  	let currentDay = currentDate.getDate();
+  	let comparisonMonth = currentMonth;
+  	
   	if ("${sessionScope.login}"=="loginComplete") {
 		loginMenu.parentNode.removeChild(loginMenu);
 		signUpMenu.parentNode.removeChild(signUpMenu);
@@ -107,42 +122,38 @@
   	dateCells.forEach((cell) => {
   	  cell.addEventListener('click', function(e) {
   	    if (e.target.textContent !== '') {
-  	      const clickedYear = currentYear;
-  	      const clickedMonth = currentMonth;
-  	      const clickedDay = parseInt(e.target.textContent);
-  	      location.href="reservationDate.jsp?year="+clickedYear+"&month="+clickedMonth+"&day="+clickedDay;
+	  	    const clickedYear = currentYear;
+  		    const clickedMonth = currentMonth;
+  	    	const clickedDay = parseInt(e.target.textContent);
+  	      	location.href="reservationDate.jsp?year="+clickedYear+"&month="+clickedMonth+"&day="+clickedDay;
   	    }
   	  });
   	});
-
-
-
-  	let currentDate = new Date(); 
-
-  	let currentYear = currentDate.getFullYear(); 
-  	let currentMonth = currentDate.getMonth() + 1;
-  	let currentDay = currentDate.getDate();
-  	let comparisonMonth = currentMonth;
-  	function updateCalendar() {
-    	let yearAndMonth = "'"+currentYear+""+"년"+"'"+"'"+currentMonth+"'"+"월";
-    	month.innerText = yearAndMonth.replace(/'/g, '');
+	
+  	 function updateCalendar() {
+  	    let yearAndMonth = "'" + currentYear + "" + "년 " + "'" + "'" + currentMonth + "'" + "월 "+"'"+currentDay+"'"+"일";
+  	    month.innerText = yearAndMonth.replace(/'/g, '');
+  	    let date = 1;
+  	    const firstDay = new Date(currentYear, currentMonth - 1, 1).getDay();
+  	    
+  	    dateCells.forEach((cell, index) => {
+  	        if (index >= firstDay && date <= getLastDayOfMonth(currentYear, currentMonth)) {
+  	            cell.textContent = date;
+  	            cell.classList.remove('disabled-date'); 
+  	            if (Number(cell.innerText) < Number(currentDay) && comparisonMonth == currentMonth) {
+  	          	    cell.classList.add('disabled-date'); 
+  	            }
+  	            if (cell.innerText == currentDay) {
+					cell.style.background="#BEEFFF";
+				}
+  	          date++;
+  	        } 
+  	        else {
+  	        	cell.textContent = '';
+  	        	cell.classList.add('disabled');
+  	        }
+  	    });
     	
-    	
-
-    	let date = 1;
-    	const firstDay = new Date(currentYear, currentMonth - 1, 1).getDay(); 
-    	dateCells.forEach((cell, index) => {
-      		if (index >= firstDay && date <= getLastDayOfMonth(currentYear, currentMonth)) {
-        		cell.textContent = date;
-        		date++;
-      		}
-      		else {
-        		cell.textContent = '';
-      		}
-      		
-    	});//테이블에 날짜 표시
-    	
-    	console.log(dateCells.textContent);
     	if (comparisonMonth == currentMonth) {
     		prevBtn.disabled = true;
     	}
@@ -150,8 +161,6 @@
       		prevBtn.disabled = false;
       	}
     }
-  	
-  
   	
     prevBtn.addEventListener('click', () => {
     	if (currentMonth === 1) {
@@ -169,9 +178,7 @@
      		currentMonth = 1;
       		currentYear++;
     	} 
-    	else {
-     		currentMonth++;
-    }
+    	else currentMonth++;
     	updateCalendar();
     });
 

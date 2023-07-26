@@ -20,8 +20,7 @@ button{
 }
 
 .box2{
-	height:60%;
-	border:1px solid white;
+	height:80%;
 	border-radius:5px;
 	display: flex;
 	align-items: center;
@@ -36,13 +35,25 @@ button{
 }
 
 
-input[type=text]{
+#telInput{
 	width:300px;
 	height: 30px;
 	border:none;
+	background:none;
+	border-bottom : 2px solid white;
+}
+
+#telInput::placeholder{
+	color:white;
+	font-size:17px;
+}
+
+
+#telInput:focus{
+	background:none;
+	border:none;
 	outline:none;
-	border-radius:10px;
-	background:white;
+	border-bottom : 2px solid skyblue;
 }
 
 
@@ -61,6 +72,10 @@ input[type=submit]{
 	cursor: pointer;
 }
 
+.disabled-date {
+    color: gray;
+    pointer-events: none;
+}
 
 
 

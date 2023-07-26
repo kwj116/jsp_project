@@ -41,11 +41,13 @@
 	const loginMenu = document.querySelector('#login');
 	const signUpMenu = document.querySelector('#signUp');
 	const logoutMenu = document.querySelector('#logout');
+    const checkRes = document.querySelector('#checkRes');
 	const backBtn = document.querySelector('.backBtn');
 	const timeCells = document.querySelectorAll('.time');
 	if ("${sessionScope.login}"=="loginComplete") {
 	loginMenu.parentNode.removeChild(loginMenu);
 	signUpMenu.parentNode.removeChild(signUpMenu);
+	checkRes.parentNode.removeChild(checkRes);
 	logoutMenu.style.display="inline";	
 	}
 	timeCells.forEach((cell) =>{

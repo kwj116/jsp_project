@@ -67,12 +67,12 @@
     const loginMenu = document.querySelector('#login');
     const signUpMenu = document.querySelector('#signUp');
     const logoutMenu = document.querySelector('#logout');
+    const checkRes = document.querySelector('#checkRes');
     const selectOption = document.querySelector('select');
     const demo = document.querySelector('#demo');
     const revenue = document.getElementsByName('revenue')[0];
     const nonMemTel = document.querySelector('#nonMemTel');
     const form = document.querySelector('form');
-
     selectOption.addEventListener('change', function () {
     	const optionValue = selectOption.value;
     	if (optionValue == "") {
@@ -108,6 +108,7 @@
   	if ("${sessionScope.login}" == "loginComplete") {
     	loginMenu.parentNode.removeChild(loginMenu);
     	signUpMenu.parentNode.removeChild(signUpMenu);
+    	checkRes.parentNode.removeChild(checkRes);
     	logoutMenu.style.display = "inline";
     	nonMemTel.style.display = "none";
   	}

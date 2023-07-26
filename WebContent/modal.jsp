@@ -32,6 +32,7 @@
         if (!isChecked) {
             e.preventDefault(); 
             alert('적어도 하나의 옵션을 선택해주세요.');
+            return;
         }
         alert("설문에 참여해주셔서 감사합니다!")
     });
