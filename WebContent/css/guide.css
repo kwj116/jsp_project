@@ -147,3 +147,38 @@ h4{
 	flex-direction: column;
 }
 
+
+.g_body::before {
+  content: "";
+  background: url('img/star.png'); 
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: fixed;
+  /*background-size: 100% 140%;*/
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 1;
+  animation: moveStar 50s infinite linear forwards, twinkling 5s infinite linear;
+  transition: all 1s;
+}
+
+/* Animation for twinkling stars */
+@keyframes twinkling {
+  0% {}
+  50% {filter:grayScale(100%);}
+  100% {}
+}
+
+@keyframes moveStar {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+     background-position: 100% 100%;
+     
+  }
+}

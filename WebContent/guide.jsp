@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/guide.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/guide.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
 <title>Gallery내 겸비시설</title>
 </head>
@@ -74,15 +74,6 @@
 <%@ include file="footer.jsp" %>
 </body>
 <script>
-	const loginMenu = document.querySelector('#login');
-	const signUpMenu = document.querySelector('#signUp');
-	const logoutMenu = document.querySelector('#logout');
-	if ("${sessionScope.login}"=="loginComplete") {
-		loginMenu.parentNode.removeChild(loginMenu);
-		signUpMenu.parentNode.removeChild(signUpMenu);
-		logoutMenu.style.display="inline";
-		console.log("${sessionScope.login}");
-	}
 	var roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div
 	var roadview = new kakao.maps.Roadview(roadviewContainer); //로드뷰 객체
 	var roadviewClient = new kakao.maps.RoadviewClient(); //좌표로부터 로드뷰 파노ID를 가져올 로드뷰 helper객체

@@ -106,41 +106,41 @@ nav>a:hover{
 }
 
 
-body::after {
+body::before {
   content: "";
-  filter:grayScale(100%);
-  background: url('https://clipart-library.com/image_gallery2/Stars-PNG-Clipart.png'); 
-  background-repeat: repeat;
+  background: url('../img/star.png'); 
+  background-repeat: no-repeat;
   background-size:cover;
-  background-position: top left;
   position: fixed;
+  /*background-size: 100% 140%;*/
+  background-position: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.3;
-  animation: twinkling 3s infinite;
+  opacity: 1;
+  animation: moveStar 50s infinite linear forwards, twinkling 5s infinite linear;
+  transition: all 1s;
 }
 
 /* Animation for twinkling stars */
 @keyframes twinkling {
+  0% {}
+  50% {filter:grayScale(100%);}
+  100% {}
+}
+
+@keyframes moveStar {
   0% {
-    opacity: 0.1;
-    width:100px;
-    height:100px;
-  }
-  50% {
-    opacity: 0.5;
-    width:300px;
-    height:300px;
+    background-position: 0% 0%;
   }
   100% {
-    opacity: 0.1;
-    width:500px;
-    height:500px;
+     background-position: 100% 100%;
+     
   }
 }
+
 
 
 
