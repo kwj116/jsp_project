@@ -101,17 +101,17 @@
   	const nextBtn = document.querySelector('.nextBtn');
   	const month = document.querySelector('.month');
   	const dateCells = document.querySelectorAll('.date');
-  	
+  	const res = document.querySelector("#res");
   	const body = document.querySelector('body');
-    const modal = document.querySelector('.modal');
-    const closePopup = document.querySelector('.modal_close_btn');
 
   	let currentDate = new Date(); 
-
   	let currentYear = currentDate.getFullYear(); 
   	let currentMonth = currentDate.getMonth() + 1;
   	let currentDay = currentDate.getDate();
   	let comparisonMonth = currentMonth;
+  	
+  	res.style.color="#FFF064";
+  	res.style.fontWeight="bold";
   	
   	if ("${sessionScope.login}"=="loginComplete") {
 		loginMenu.parentNode.removeChild(loginMenu);
@@ -129,22 +129,34 @@
   	    }
   	  });
   	});
-	
-  	 function updateCalendar() {
-  	    let yearAndMonth = "'" + currentYear + "" + "년 " + "'" + "'" + currentMonth + "'" + "월 "+"'"+currentDay+"'"+"일";
+  	
+  	function updateCalendar() {
+  	    let yearAndMonth = "'" + currentYear + "" + "년 " + "'" + "'" + currentMonth + "'" + "월 ";
   	    month.innerText = yearAndMonth.replace(/'/g, '');
   	    let date = 1;
   	    const firstDay = new Date(currentYear, currentMonth - 1, 1).getDay();
-  	    
+  	    const monthValue = currentDate.getMonth()+1;//현재 월
+		const calenderMonth = currentMonth;//달력상의 월
+  	    const calenderDay = 0;////////////////////////////////////////
+  	    console.log("달력날짜:"+calenderMonth);
+  	    console.log("현재날짜:"+monthValue);
+  	    console.log("현재일:"+currentDay);
   	    dateCells.forEach((cell, index) => {
   	        if (index >= firstDay && date <= getLastDayOfMonth(currentYear, currentMonth)) {
   	            cell.textContent = date;
   	            cell.classList.remove('disabled-date'); 
-  	            if (Number(cell.innerText) < Number(currentDay) && comparisonMonth == currentMonth) {
+  	            if (Number(cell.innerText) < Number(currentDay) && monthValue == calenderMonth) {
   	          	    cell.classList.add('disabled-date'); 
   	            }
-  	            if (cell.innerText == currentDay) {
+  	            if (cell.innerText == currentDay && monthValue == calenderMonth) {
 					cell.style.background="#BEEFFF";
+				}//달력 셀의 날짜와 현재날짜가 같고, 현재 월이랑 달력상의 월이 같을 경우 배경색 지정
+  	            if (monthValue == calenderMonth && Number(cell.innerText)< Number(currentDay)) {
+  	            	cell.classList.add('disabled-date'); 
+				}
+  	            	//달력날짜랑 현재날짜보다 작은 경우,현재 월이랑 달력의 월이랑 같을 경우,배경색 지정
+				if (monthValue != calenderMonth){
+					cell.style.background = "white";
 				}
   	          date++;
   	        } 
@@ -153,8 +165,8 @@
   	        	cell.classList.add('disabled');
   	        }
   	    });
-    	
-    	if (comparisonMonth == currentMonth) {
+
+  	    if (comparisonMonth == currentMonth) {
     		prevBtn.disabled = true;
     	}
       	else{

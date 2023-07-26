@@ -13,14 +13,15 @@
 <body>
 <%@ include file="header.jsp" %><!-- header -->
 <%@ include file="menu.jsp" %><!-- 메뉴  -->
-<div class="container">
-    <div class="box" id="demo"><!-- css 파일로 옮기기 -->
+<div class="container" id="demo">
+    <div class="box"><!-- css 파일로 옮기기 -->
         <h4>회원인 경우, 로그인 → 본인 아이디 메뉴에 들어가면 예약정보를 확인 할 수 있습니다.</h4>
 	    <div class="box2"><!-- css 파일로 옮기기 -->
 			<span>
-			연락처 <input type="text" name="tel" id="telInput" placeholder="ex)010-0000-0000">
-			</span>
+			<p><h3>연락처</h3></p> 
+			<input type="text" name="tel" id="telInput" placeholder="ex)010-0000-0000">
 			<input type="submit" onclick="loadDoc()" value="조회">
+			</span>
 	    </div>
     </div>
 </div>
@@ -32,7 +33,14 @@
     const logoutMenu = document.querySelector('#logout');
     const inputTel = document.querySelector('#telInput');
     const h4 = document.querySelector('h4');
+    const checkRes = document.querySelector('#checkRes');
     const telRegex = /^\d{3}-\d{4}-\d{4}$/; 
+    
+    
+    checkRes.style.color="#FFF064";
+    checkRes.style.fontWeight="bold";
+    
+    
     
     if ("${sessionScope.login}" == "loginComplete") {
         loginMenu.parentNode.removeChild(loginMenu);

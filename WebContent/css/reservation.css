@@ -15,23 +15,35 @@ button{
 	display:flex; 
 	flex-direction: column; 
 	align-items: center; 
-	height: 70%;  
-	justify-content: space-around;
+	height: 60%;
+	  
 }
 
 .box2{
-	height:80%;
+	margin-top: 50px;
 	border-radius:5px;
 	display: flex;
 	align-items: center;
-	padding:30px;
+	padding:80px;
+	background-color:#008080;
+	box-shadow : 20px 20px 10px black;
 }
 
 .res_list{
 	width:500px;
 	height:600px;
-	background:white;
-	color:black;
+	background:#008080;
+	color:white;
+	box-shadow : 20px 20px 10px black;
+}
+
+td,th{
+	text-align:center;
+	border-bottom:1px solid white;
+}
+
+th{
+	border-right: 1px solid white;
 }
 
 
@@ -58,18 +70,20 @@ button{
 
 
 input[type=submit]:hover {
-  background: #305f80;
+ 	background: skyblue;
 }
 
+span{
+	text-align: center;
+}
 
 input[type=submit]{
 	width:70px;
-	height:30px;
+	height:40px;
 	border: 1px solid white;
 	background:none;
 	color:white;
 	outline:none;
-	cursor: pointer;
 }
 
 .disabled-date {

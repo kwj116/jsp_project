@@ -51,6 +51,11 @@
 	const loginMenu = document.querySelector('#login');
 	const signUpMenu = document.querySelector('#signUp');
 	const logoutMenu = document.querySelector('#logout');
+	
+	loginMenu.style.color="#FFF064";
+	loginMenu.style.fontWeight="bold";
+
+	
 	if ("${sessionScope.login}"=="loginComplete") {
 		loginMenu.parentNode.removeChild(loginMenu);
 		signUpMenu.parentNode.removeChild(signUpMenu);

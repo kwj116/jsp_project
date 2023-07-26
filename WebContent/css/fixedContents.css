@@ -120,15 +120,31 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.7;
-  animation: moveStar 50s infinite linear forwards, twinkling 5s infinite linear;
+  opacity: 0.5;
+  animation: moveStar 30s infinite linear forwards, twinkling 3s infinite linear forwards;
   transition: all 1s;
 }
+/*body::after {
+  content: "";
+  background: url('../img/star.png'); 
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: fixed;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:-2;
+  filter: opacity(0.5) drop-shadow(0 0 0 blue);
+  opacity: 0.7;
+  transition: all 1s;
+}
+*/
 
-/* Animation for twinkling stars */
 @keyframes twinkling {
   0% {}
-  50% {filter:grayScale(100%);}
+  50% {filter:grayScale(100%); opacity:1;}
   100% {}
 }
 

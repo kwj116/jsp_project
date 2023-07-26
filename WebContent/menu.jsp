@@ -6,7 +6,7 @@
 		<a id="user_id" href="UserInfo" title="개인정보를 확인 할 수 있습니다.">${userId}</a>
 		<a id="login" href="login.jsp">로그인</a>
 		<a id="signUp" href="signUp.jsp">회원가입</a>
-		<a href="reservation.jsp">예약</a>
+		<a id="res" href="reservation.jsp">예약</a>
 		<a href="about.jsp">전시회</a>
 		<a href="guide.jsp">관람 가이드</a>
 		<a href="onlineExhibition.jsp">온라인 전시관</a>

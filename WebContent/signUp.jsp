@@ -62,7 +62,11 @@
 	const name = document.getElementsByName('name')[0];
 	const email = document.getElementsByName('email')[0];
 	const form = document.querySelector('form');
-
+	const signUp = document.querySelector('#signUp');
+	
+	signUp.style.color="#FFF064";
+	signUp.style.fontWeight="bold";
+	
 	form.addEventListener('submit',function(e){
 		e.preventDefault();
 		
