@@ -4,8 +4,11 @@
 <html>
 <head>
 <link href="css/guide.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Gallery내 겸비시설</title>
+<title>Gallery 관람 가이드</title>
 </head>
 <body class="g_body">
 <div class="header_box">
@@ -45,12 +48,21 @@
 				</td>
 			</tr>
 			<tr><td colspan="2"><hr></td></tr>
+			<tr>
+				<td><h2>입장 제한</h2></td>
+				<td>
+					<ul>
+						<li>전시회의 정적인 감상 분위기를 위해,</li><br>
+						<li>초등학교 취학 이전의 어린이들은 입장을 제한하고 있습니다.</li>
+					</ul>
+				</td>
+			</tr>
 		</table>
 	</div>
 	<div class="sec2 section">
+		<h2 class="rule">전시회 관람시 유의 사항</h2>
 		<div class="guide">
 			<ul class="g_list">
-				<li><h2>전시회 관람시 유의 사항</h2></li>
 				<li>마스크 착용은 방역지침을 준수해주시기 바랍니다.</li>
 				<li>전시회의 모든 공간은 금연구역입니다.</li>
 				<li>음식물 반입과 안내견 이외의 반려동물의 출입은 금지되어 있습니다.</li>
@@ -70,8 +82,6 @@
 </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b92fef41ec2682ec915d7b9fbd8ab64"></script>
-
-<%@ include file="footer.jsp" %>
 </body>
 <script>
 	var roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div

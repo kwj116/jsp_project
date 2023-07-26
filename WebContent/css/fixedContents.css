@@ -2,6 +2,7 @@
 
 
 body {
+	font-family: 'Orbit', sans-serif;
 	background-image: url(https://cdn.pixabay.com/photo/2020/12/25/04/51/polar-lights-5858656_1280.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -16,7 +17,7 @@ body {
 	background:none;
 	text-align:center;
 	color: white;
-	height:100px;
+	height:80px;
 	display:flex;
 	align-items:center;
 	justify-content:center;
@@ -57,7 +58,7 @@ body {
   display: flex;
   align-items: center;
   background-color: black;
-  height: 100px;
+  height: 80px;
   color: white;
   justify-content: space-around;
 }
@@ -119,7 +120,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 1;
+  opacity: 0.7;
   animation: moveStar 50s infinite linear forwards, twinkling 5s infinite linear;
   transition: all 1s;
 }

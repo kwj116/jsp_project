@@ -2,10 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="css/fixedContents.css" rel="stylesheet" type="text/css">
-    <link href="css/reservation.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+<link href="css/fixedContents.css" rel="stylesheet" type="text/css">
+<link href="css/reservation.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
 <%@ include file="header.jsp" %><!-- header -->

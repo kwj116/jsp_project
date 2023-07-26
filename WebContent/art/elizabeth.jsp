@@ -8,10 +8,12 @@
 </head>
 <style>
 	body{
-		background: url("https://cdn.pixabay.com/photo/2022/12/22/21/43/background-7673330_1280.jpg");
-		background-size: cover;
+		background: url("https://cdn.pixabay.com/photo/2020/06/17/19/36/mandala-5310863_640.png");
+		background-size: contain;
+		background-position:center;
 		background-repeat: no-repeat;
 		margin: 0;
+		height: 100vh;
 	}
 </style>
 <body>

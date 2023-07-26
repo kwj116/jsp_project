@@ -6,6 +6,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+	body {
+	height : 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-image: url("https://cdn.pixabay.com/photo/2020/09/27/04/36/frame-5605667_1280.png");
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat; 
+}
+</style>
 <body>
 	<div class="grid_box">
 		<div class="box1">
