@@ -32,28 +32,29 @@ select {
 }
 
 
-input{
+input[type=submit]{
 	background:white;
 	border: 2px solid black;
 	height: 30px;
 	width: 150px;
-	cursor: pointer;
 	border-radius: 10px;
 	font-size:1.2em;
 	font-weight:bold;
 	letter-spacing: 5px;
 }
 
-input:hover{
+input[type=text]{
+	outline:none;
+	border:none;
+	border-bottom: 2px solid black;
+}
+
+input[type=text]:focus{
+	border-bottom: 2px solid skyblue;
+}
+
+input[type=submit]:hover{
 	color:white;
 	background:black;
 	transition:0.3s linear;
 }
-@keyframes wave {
-  0% { 
-  	transform: translate(-50%) rotate(-180deg); 
-  }
-  100% { 
-  	transform: translate(-50%) rotate(360deg); 
-  } 
-} 
