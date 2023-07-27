@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import vo.ReservationVO;
+import vo.MemberReservationVO;
 import vo.UserVO;
 
 public class UserDAO {

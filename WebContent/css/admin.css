@@ -2,66 +2,69 @@
 
 
 body{
-	font-family: 'Orbit', sans-serif;
+	font-family: 'Noto Serif KR', serif;
 	display: flex;
 	align-items:center;
 	flex-direction: column;
 	transition : 0.3s linear;
 	background-color: #282828;
-	color : white;
+	
 	height: 100vh;
 	margin : 0;
 }
 
-button{
-	margin-top : 2%;
-	border:none;
-	cursor: pointer;
-}
-
 table{
-	width: 500px;
-	margin: 100px;
 	text-align: center;
+	font-size:17px;
+	height:100px;
 }
 
 caption{
 	font-size : 17px;
 }
 
+li{
+	margin-top:30px;
+	font-size:15px;	
+	cursor: pointer;
+	color:white;
+}
+
+li:hover{
+	color: gray;
+}
+
+.grid_box{
+	display: grid;
+	width:100%;
+	height:100%;
+	grid-template-columns:20% 80%;
+}
 
 nav{
 	width: auto;
 }
 
-li{
-	list-style:none;
-	margin:10px;
-	line-height:50px;
-}
-
 
 a{
-	float : left;
-	color : peru;
+	color : orange;
 	text-decoration: none;
-	font-family: serif;
 }
 
 
 header{
 	font-size : 20px;
+	height: 70px;
+	color:white;
 }
 
-
-.light_mode{
-	background-color: white;
-	color : black;
-	transition : 0.3s linear;
+.side_bar{
+	background:#2c2e3d;
 }
 
 .container{
-	height : 100%;
+	background:#ebebeb;
 	display: flex;
-	align-items: center;
+	align-items:center;
+	justify-content: center;
 }
