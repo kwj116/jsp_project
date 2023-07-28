@@ -76,9 +76,8 @@
 			</ul>
 		</div>	
 	</div>
-	<div class="sec3 section">
-	</div>
-		<div id="roadview" style="margin-bottom:100px;"></div>
+	<div class="sec3 section"></div>
+		
 </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7b92fef41ec2682ec915d7b9fbd8ab64"></script>

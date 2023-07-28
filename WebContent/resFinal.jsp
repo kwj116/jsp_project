@@ -73,6 +73,7 @@
     const revenue = document.getElementsByName('revenue')[0];
     const nonMemTel = document.querySelector('#nonMemTel');
     const form = document.querySelector('form');
+    const telRegex = /^\d{3}-\d{4}-\d{4}$/; 
     selectOption.addEventListener('change', function () {
     	const optionValue = selectOption.value;
     	if (optionValue == "") {
@@ -97,9 +98,14 @@
     	if ("${sessionScope.login}" !== "loginComplete") {
       		const nonMemTelValue = document.querySelector('input[name="nonMemTel"]').value;
       		if (nonMemTelValue === "") {
-        	alert("연락처를 입력해주세요.");
-        	return;
+        		alert("연락처를 입력해주세요.");
+        		return;
       		}
+      		if (!telRegex.test(nonMemTelValue)) { //JavaScript의 정규 표현식 객체의 메서드
+                alert("올바른 형식의 연락처를 입력해주세요."); 
+                nonMemTelValue.focus();
+                return;
+            }
     	}
 
     	form.submit();

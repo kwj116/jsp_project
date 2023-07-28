@@ -32,6 +32,9 @@ public class LoginCheckServlet extends HttpServlet {
                   session.setAttribute("login", login);//로그인시 회원가입,로그인 메뉴가 사라지고, 로그아웃 메뉴가 나타나게 하기 위함
                   session.setAttribute("userId", userId);
                   if (id.equals("admin")) {
+                	session.removeAttribute("userId");
+                	session.removeAttribute("id");
+                	session.removeAttribute("login");//관리자 로그인을 하면 임의로 홈화면 이동 시 admin로그인 정보가 남아 있기 때문
 					request.getRequestDispatcher("admin.jsp").forward(request, response);
                   }
                   else {

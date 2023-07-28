@@ -114,6 +114,10 @@ table{
 	width:100%;
 	background-repeat: no-repeat;
 }
+
+.sec3{
+	height: 50vh;
+}
 .rule{
 	margin-top:100px;
 	color:white;
