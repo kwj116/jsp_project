@@ -22,7 +22,7 @@
 				</tr>
 				<tr>
 					<th>
-					<img class="art" src="https://vsemart.com/wp-content/uploads/2015/09/Angel-after-John-Melluish-Strudwick.jpg">
+					<img class="art" src="../img/Angel-after-John-Melluish-Strudwick.jpg">
 					<div class="text">
 					위 작품은 영국의 Pre-Raphaelite 화가였던<br>
 					John Melhuish Strudwick의 작품으로,<br>

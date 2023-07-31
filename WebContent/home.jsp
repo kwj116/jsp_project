@@ -27,7 +27,7 @@
 		<tr align="center"><td><i>- 요하네스 베르메르 "진주 귀걸이를 한 소녀" -</i></td></tr>
 		<tr>
 			<td>
-			<img class="mainImg" src="https://vsemart.com/wp-content/uploads/2015/09/Girl-with-a-Pearl-Earring-Jan-Vermeer.jpg"/>
+			<img class="mainImg" src="img/Girl-with-a-Pearl-Earring-Jan-Vermeer.jpg"/>
 			</td>
 		</tr>
 		<tr>

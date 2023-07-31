@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../css/art_css/font.css">
 <link rel="stylesheet" href="../css/art_css/grid.css">
 <meta charset="UTF-8">
-<title>우사인 볼트</title>
+<title>처칠</title>
 </head>
 <body>
 <div class="grid_box">
@@ -22,7 +22,7 @@
 				</tr>
 				<tr>
 					<th>
-					<img class="art" src="https://vsemart.com/wp-content/uploads/2015/09/Winston-Churchill.jpg">
+					<img class="art" src="../img/Winston-Churchill.jpg">
 					<div class="text">
 					"영국 총리"를 이야기하면 가장 먼저 떠오르는,<br>
 					세계적으로 가장 인지도 높은 영국 총리 중 한 명입니다.<br> 제2차 세계 대전 당시 아돌프 히틀러와 맞서 싸우면서 열세인 전황에도 불구하고,<br> 

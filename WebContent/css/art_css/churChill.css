@@ -45,7 +45,7 @@ img {
     
     
 .box1,.box3{
-	background-image: url("https://cdn.pixabay.com/photo/2021/08/11/20/51/wreath-6539432_1280.png");
+	/*background-image: url("https://cdn.pixabay.com/photo/2021/08/11/20/51/wreath-6539432_1280.png");*/
 	background-size: contain;
 }
 

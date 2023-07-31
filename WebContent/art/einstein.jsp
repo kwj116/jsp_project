@@ -22,7 +22,7 @@
 				</tr>
 				<tr>
 					<th>
-					<img class="art" src="https://vsemart.com/wp-content/uploads/2015/09/Albert-Einstein.jpg">
+					<img class="art" src="../img/Albert-Einstein.jpg">
 					<div class="text">
 					역사상 가장 위대한 이론 물리학자라고 여겨지는 과학자 중 한명으로, <br> 브라운 운동과 광전효과를 증명하고 양자역학을 발전시켰으며 <br> 
 					상대성 이론을 제시해 현대 물리학의 발전에 엄청난 영향을 끼친<br> 아인슈타인을 정크아트로 표현한 작품입니다.

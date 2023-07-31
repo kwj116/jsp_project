@@ -46,8 +46,12 @@ img {
     
 .box1,.box3{
 	background-image: url("https://cdn.pixabay.com/photo/2020/12/13/22/05/angels-5829501_1280.png");
-	background-size: contain;
+	background-size: cover;
 	background-color: #c75e07;
+}
+
+.box3{
+	transform: scaleX(-1);
 }
 
 .box1{
