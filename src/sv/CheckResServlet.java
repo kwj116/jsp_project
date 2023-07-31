@@ -20,14 +20,14 @@ public class CheckResServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html; charset=utf-8"); // 응답 형식을 텍스트로 지정
+        response.setContentType("text/html; charset=utf-8");
 
         String tel = request.getParameter("tel");
         try {
             UserVO rlist = UserDAO.getResList(tel);
             if (rlist == null) {
                 PrintWriter out = response.getWriter();
-                out.print("예약되지 않은 번호입니다."); // AJAX 응답으로 메시지 전송
+                out.print("예약되지 않은 번호입니다.");
             } 
             else {
             	request.setAttribute("tel", tel);

@@ -11,9 +11,9 @@
 
 body::before {
 	content: "";
-	background: url("https://cdn.pixabay.com/photo/2022/05/05/03/15/infinity-7175177_1280.png");
+	background: url("https://cdn.pixabay.com/photo/2016/02/28/21/25/decorative-1227611_1280.png");
 	background-repeat: no-repeat;
-	background-size:cover;
+	background-size:contain;
 	background-position: center;
 	position:fixed;
 	width: 100%;
@@ -40,19 +40,25 @@ body::before {
   
 img {
    	height:500px;
-	border:2px solid #b1b9b3;
+	border:2px solid #c75e07;
 }
     
     
 .box1,.box3{
-	background-image: url("https://cdn.pixabay.com/photo/2018/02/19/20/35/pi-3166191_1280.png");
+	background-image: url("https://cdn.pixabay.com/photo/2020/12/13/22/05/angels-5829501_1280.png");
 	background-size: contain;
-	background-color: #b1b9b3;
+	background-color: #c75e07;
+}
+
+.box1{
+}
+
+.box3{ 
 }
 
 table{
 	background-color: rgba(255, 255, 255, 0.8);
-	border:4px solid #b1b9b3;
+	border:4px solid #c75e07;
 	border-radius: 5px;
 	width: 647px;
 	box-shadow: 10px 10px 10px black;

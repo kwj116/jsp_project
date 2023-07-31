@@ -3,20 +3,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/art.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/art_css/angel.css">
+<link rel="stylesheet" href="../css/art_css/font.css">
+<link rel="stylesheet" href="../css/art_css/grid.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>천사</title>
 </head>
 <body>
-	<div class="container">
-        <img src="https://vsemart.com/wp-content/uploads/2015/09/Angel-after-John-Melluish-Strudwick.jpg">
-        <div class="text">
-            <h1>전시회 분위기로다가</h1>
-            <p>이곳은 전시회의 분위기를 자유롭게 표현하는 공간입니다. <br>사진과 글을 함께 배치하여 멋진 전시를 만들어보세요.</p>
-            <p>더 많은 정보와 사진은 우측의 연락처로 문의해주세요.</p>
-            <p>전시회가 성공적으로 개최되기를 기원합니다!</p>
-            <p>이곳에 추가로 내용을 채워넣을 수 있습니다.</p>
-        </div>
-    </div>
+<div class="grid_box">
+		<div class="box1"></div>
+		<div class="box2">
+			<table>
+				<tr align="center">
+					<th class="text">천사(Angel, after John Meluish Strudwick)</th>
+				</tr>
+				<tr>
+					<th>
+					<img class="art" src="https://vsemart.com/wp-content/uploads/2015/09/Angel-after-John-Melluish-Strudwick.jpg">
+					<div class="text">
+					위 작품은 영국의 Pre-Raphaelite 화가였던<br>
+					John Melhuish Strudwick의 작품으로,<br>
+					천사를 표현한 작품입니다.
+					</div>
+					</th>
+				</tr>
+			</table>
+		</div><!-- box2 -->
+		<div class="box3"></div>
+	</div>
 </body>
 </html>

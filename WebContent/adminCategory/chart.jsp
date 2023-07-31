@@ -19,7 +19,7 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', '소스');    // x축
         data.addColumn('number', '결과');    // y축
-
+	
         <%-- 데이터 추가 --%>
         data.addRow(['Instagram', ${slist.instaResult}]);
         data.addRow(['Facebook', ${slist.facebookResult}]);
