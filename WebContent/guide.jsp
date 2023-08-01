@@ -100,8 +100,6 @@
 			<tr><th>울산광역시 울주군 서생면 용연길 160</th></tr>
 		</table>
 		
-	<div class="sec3 section">
-	</div>
 	<div class="section"></div>
 </div>
 

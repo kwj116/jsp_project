@@ -36,10 +36,13 @@ nav{
 
 
 a{
-	color : orange;
+	color:white;
 	text-decoration: none;
 }
 
+a:hover{
+	color:gray;
+}
 
 header{
 	font-size : 20px;

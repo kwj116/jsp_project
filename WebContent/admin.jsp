@@ -21,11 +21,13 @@
 		<li onclick="pickResStatus('resMemStatus')">회원 예약 현황</li>
 		<li onclick="pickResStatus('resNonMemStatus')">비회원 예약 현황</li>
 		<li onclick="pickResStatus('survey')">설문조사 통계</li>
+		<li onclick="pickResStatus('revenue')">수익 추세</li>
 		<li onclick="pickResStatus('logout')">관리자 모드 종료</li>
 	</ul>
 	</div>
 	<div class="container" id="demo">
-	</div>
+		<%@ include file="adminCategory/chart.jsp" %>
+		</div>
 	</div>
 </body>
 <script>
@@ -45,7 +47,10 @@
 			xhttp.open("GET", "adminCategory/resNonMemStatus.jsp", true);
 		}
 		else if (option == "survey") {
-			xhttp.open("GET", "adminCategory/chart.jsp", true);
+			location.href="admin.jsp";
+		}
+		else if (option == "revenue") {
+			location.href="adminCategory/revenue.jsp";
 		}
 		else if (option == "logout") {
 			alert("관리자 모드를 종료 합니다.");

@@ -8,7 +8,7 @@
 <c:set var="nonMemHeadCount" value="${UserDAO.getNonMemCtn()}"/>
 <c:set var="totalHeadCount" value="${memHeadCount + nonMemHeadCount}"/>
 <c:set var="totalPay" value="${UserDAO.getPrice()}"/>
-<table >
+<table style="width: 400px;" >
 <caption>예약 현황 및 수입</caption>
 	<tr>
 		<th>총 누적 수입</th><td><c:out value="${totalPay }₩"/></td>

@@ -52,9 +52,4 @@ public class SurveyDAO {
 	    
 	    return slist;
 	}
-
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		
-		System.out.println(surveyResult().getInstaResult());
-	}
 }
