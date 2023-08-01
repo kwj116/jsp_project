@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 .about_body{
 	height:auto;
 	display:flex;
@@ -12,6 +10,8 @@
     transition: 0.5s linear;
 	/*background:linear-gradient(to bottom, #0a2a3b,#076f68,#0a2a3b);*/
 }
+
+
 
 .about_body::-webkit-scrollbar {
   	display: none;

@@ -87,6 +87,15 @@
       <td class="date"></td>
       <td class="date"></td>
     </tr>
+    <tr>
+      <td class="date"></td>
+      <td class="date"></td>
+      <td class="date"></td>
+      <td class="date"></td>
+      <td class="date"></td>
+      <td class="date"></td>
+      <td class="date"></td>
+    </tr>
   </table>
 </div>
 <%@ include file="footer.jsp" %>
@@ -148,9 +157,7 @@
   	            if (Number(cell.innerText) < Number(currentDay) && monthValue == calenderMonth) {
   	          	    cell.classList.add('disabled-date'); 
   	            }
-  	            if (cell.innerText == currentDay && monthValue == calenderMonth) {
-					cell.style.background="#BEEFFF";
-				}//달력 셀의 날짜와 현재날짜가 같고, 현재 월이랑 달력상의 월이 같을 경우 배경색 지정
+  	           //달력 셀의 날짜와 현재날짜가 같고, 현재 월이랑 달력상의 월이 같을 경우 배경색 지정
   	            	//달력날짜랑 현재날짜보다 작은 경우,현재 월이랑 달력의 월이랑 같을 경우,배경색 지정
 				if (monthValue != calenderMonth){
 					cell.style.background = "white";
