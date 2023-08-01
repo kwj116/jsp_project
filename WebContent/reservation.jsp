@@ -146,12 +146,13 @@
   	    const firstDay = new Date(currentYear, currentMonth - 1, 1).getDay();
   	    const monthValue = currentDate.getMonth()+1;//현재 월
 		const calenderMonth = currentMonth;//달력상의 월
-  	    const calenderDay = 0;////////////////////////////////////////
   	    console.log("달력날짜:"+calenderMonth);
   	    console.log("현재날짜:"+monthValue);
   	    console.log("현재일:"+currentDay);
+  	    console.log("달력일:"+date);
   	    dateCells.forEach((cell, index) => {
   	        if (index >= firstDay && date <= getLastDayOfMonth(currentYear, currentMonth)) {
+  	        	
   	            cell.textContent = date;
   	            cell.classList.remove('disabled-date'); 
   	            if (Number(cell.innerText) < Number(currentDay) && monthValue == calenderMonth) {
@@ -162,6 +163,12 @@
 				if (monthValue != calenderMonth){
 					cell.style.background = "white";
 				}
+  	            
+  	            if (calenderMonth == monthValue && currentDay == date ) {
+  					cell.style.background="blue";
+  				}
+				
+   	              	           
   	          date++;
   	        } 
   	        else {
