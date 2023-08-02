@@ -12,6 +12,11 @@
 <link href="css/admin.css" rel="stylesheet" type="text/css">
 <link href="css/adminTable.css" rel="stylesheet" type="text/css">
 </head>
+<c:set var="memHeadCount" value="${UserDAO.getMemberCnt()}"/>
+<c:set var="nonMemHeadCount" value="${UserDAO.getNonMemCtn()}"/>
+<c:set var="totalHeadCount" value="${memHeadCount + nonMemHeadCount}"/>
+<c:set var="totalPay" value="${UserDAO.getPrice()}"/>
+
 <body>
 	<!-- <a class="exitBtn" href="Logout">관리자 모드 종료</a> -->
 	<div class="grid_box">
