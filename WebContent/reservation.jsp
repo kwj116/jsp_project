@@ -165,10 +165,8 @@
 				}
   	            
   	            if (calenderMonth == monthValue && currentDay == date ) {
-  					cell.style.background="blue";
+  					cell.style.background="skyblue";
   				}
-				
-   	              	           
   	          date++;
   	        } 
   	        else {

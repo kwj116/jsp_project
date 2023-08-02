@@ -257,5 +257,11 @@ public class UserDAO {
 		pstmt.setString(1, id);
 		pstmt.executeUpdate();
 	}
+	public static void deleteResNonMember(int no) throws ClassNotFoundException, SQLException {
+		String sql = "DELETE FROM res_nonmember WHERE resNum = ?";
+		PreparedStatement pstmt = DBcon.connection().prepareStatement(sql);
+		pstmt.setInt(1, no);
+		pstmt.executeUpdate();
+	}
 	
 }

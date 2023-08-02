@@ -9,7 +9,7 @@
 <link href="css/about.css" rel="stylesheet" type="text/css">
 <link href="css/fixedContents.css" rel="stylesheet" type="text/css">
 <meta charset="UTF-8">
-<title>정크아트 소개</title>
+<title>전시회</title>
 </head>
 <body class="about_body">
 <%@ include file="header.jsp"%>
@@ -41,16 +41,12 @@
 </div>
 
 <div class="section sec2">
-	<i class="manner"><u>Manner at exhibition</u></i>
 </div>
 <div class="section sec3">
-	<i class="manner"><u>Manner at exhibition</u></i>
 </div>
 <div class="section sec4">
-	<i class="manner"><u>Manner at exhibition</u></i>
 </div>
 <div class="section sec5">
-	<i class="manner"><u>Manner at exhibition</u></i>
 </div>
 <%@ include file="footer.jsp"%>
 </body>
@@ -65,8 +61,6 @@
 		else {
 		    chBtn.innerText = 'light mode';
 		}
-	})
-	
-	
+	});
 </script>
 </html>

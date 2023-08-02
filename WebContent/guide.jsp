@@ -150,15 +150,15 @@
 		}
 		if (window.scrollY >= 700) {
 			sec1.style.opacity="1";
-			sec1.style.transition="opacity 0.5s linear";
+			sec1.style.transition="opacity 1.5s linear";
 		}
 		if (window.scrollY >= 3000){
 			sec2.style.opacity="1";
-			sec2.style.transition="opacity 0.5s linear";
+			sec2.style.transition="opacity 1.5s linear";
 		}
 		if (window.scrollY >= 5300) {
 			table.style.opacity = "1";
-			table.style.transition = "opacity 0.5s linear";
+			table.style.transition = "opacity 1.5s linear";
 		}
 		
 	});
