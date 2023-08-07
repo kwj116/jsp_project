@@ -37,6 +37,8 @@
 </body>
 <script>
 	const li = document.querySelectorAll('li');
+	
+	
 	function pickResStatus(option) {
 		const xhttp = new XMLHttpRequest();
 		xhttp.onload = function() {

@@ -40,12 +40,14 @@ public class ReservationServlet extends HttpServlet {
 				String userId = isLogin.substring(0,isLogin.length()-1);
 				UserDAO.insertMemResInfo(resDate, headCount, userId,pay,resTime);
 				session.setAttribute("name", isLogin);
-				response.sendRedirect("resSuccess.jsp?year="+year+"&month="+month+"&day="+day+"&time="+resTime+"&headCount="+headCount);
+				response.sendRedirect("resSuccess.jsp?year="+year+"&month="+month+"&day="+day+"&time="+resTime+"&headCount="+headCount
+						+"&resDate="+resDate+"&pay="+pay);
 				//예약 날짜 및 예약 인원 파라미터로 보내기
 			}//회원인 경우
 			else {
 				UserDAO.insertNonMemResInfo(resDate,headCount,nonMemTel, pay, resTime); 
-				response.sendRedirect("resSuccess.jsp?year="+year+"&month="+month+"&day="+day+"&time="+resTime+"&headCount="+headCount);
+				response.sendRedirect("resSuccess.jsp?year="+year+"&month="+month+"&day="+day+"&time="+resTime+"&headCount="+headCount+
+						"&nonMemTel="+nonMemTel+"&pay="+pay+"&resDate="+resDate);
 			}//회원이 아닌 경우
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

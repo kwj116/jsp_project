@@ -171,6 +171,10 @@ table{
 	color:black;
 }
 
+.map{
+	opacity: 0;	
+}
+
 .guide{
 	height: 50vh;
 	margin: 0;

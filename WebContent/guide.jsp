@@ -77,8 +77,8 @@
 			</ul>
 		</div>	
 	</div>
-	<div class="section"></div>
-		<table>
+	<div class="section" ></div>
+		<table class="map">
 		<caption><h2>오시는 길</h2></caption>
 			<tr>
 				<th align="center">
@@ -110,28 +110,8 @@
 	const a = document.querySelector("a");
 	const sec1 = document.querySelector(".sec1");
 	const sec2 = document.querySelector(".sec2");
-	const table = document.querySelector("table");
+	const table = document.querySelector(".map");
 		
-	
-	
-	/*var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-	mapOption = { 
-	    center: new kakao.maps.LatLng(35.3574895, 129.3078722), // 지도의 중심좌표
-	    level: 3 // 지도의 확대 레벨
-	};
-	
-	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-	
-	//마커가 표시될 위치입니다 
-	var markerPosition  = new kakao.maps.LatLng(35.369352, 129.3008461); 
-	
-	//마커를 생성합니다
-	var marker = new kakao.maps.Marker({
-	position: markerPosition
-	});
-	//마커가 지도 위에 표시되도록 설정합니다
-	marker.setMap(map);*/
-	
 	
 	window.addEventListener("scroll", function(){
 		console.log(window.scrollY);
@@ -156,11 +136,10 @@
 			sec2.style.opacity="1";
 			sec2.style.transition="opacity 1.5s linear";
 		}
-		if (window.scrollY >= 5300) {
-			table.style.opacity = "1";
-			table.style.transition = "opacity 1.5s linear";
+		if (window.scrollY >= 5000) {
+			table.style.opacity="1";
+			table.style.transition="opacity 1.5s linear";
 		}
-		
 	});
 	
 	function MapWalker(position){
