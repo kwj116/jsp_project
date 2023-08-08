@@ -51,10 +51,9 @@
   
 }
 
-
-/*.g_body::-webkit-scrollbar {
+.g_body::-webkit-scrollbar {
   display: none;
-}*/
+}
 
 .g_body{
 	display: flex;
